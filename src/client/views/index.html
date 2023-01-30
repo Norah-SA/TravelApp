@@ -29,18 +29,18 @@
         <form action="" id="form">
             <div class="group-form">
                 <i class="fa fa-plane-departure icon"></i>
-                <input type="text" class="fromInput" name="from" required> 
+                <input type="text" class="fromInput" name="from" id="fromInput" required> 
                 <label for="" class="labelText"> From</label>
             </div>
             <div class="group-form">
                 <i class="fa fa-plane-arrival icon"></i>
-                <input type="text" class="toInput" name="to"  required>
+                <input type="text" class="toInput" name="to" id="toInput"  required>
                 <label for="" class="labelText">To</label>
             </div>
             
             <div> 
                 <label for="dateLabel"> <i class="fa fa-calendar iconCal "></i> Departing on </label> <br>
-                <input type="date" class="dateInput" name="date" required>
+                <input type="date" class="dateInput" name="date" id="dateInput" required>
                
 
             </div>
@@ -58,7 +58,7 @@
            
             <h3 class="departure_from_city"> <i class="fa fa-plane-departure infoIcon"></i>Departure from:<span id="departure"></span></h3>
             <h3 class="departure_from_city"> <i class="fa fa-plane-arrival infoIcon"></i>Destination to:<span id="destination"></span></h3>
-            <h3 class="departure_from_city"> <i class="fa fa-plane-arrival infoIcon"></i>Days to go:<span id="numberOfDays"></span></h3>
+            <h3 class="departure_from_city"> <i class="fafa-calendar-day infoIcon"></i>Days to go:<span id="numberOfDays"></span></h3>
             <h3 class="departure_from_city"> <i class="fa fa-calendar infoIcon"></i>Departing on:<span id="date"></span></h3>
             <h3 class="departure_from_city"> <i class="fa fa-cloud infoIcon"></i>weather:<span id="temp">200C</span> &#176; F, <span
                 id="summary"></span></h3>

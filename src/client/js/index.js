@@ -43,15 +43,15 @@ addTripBtn.addEventListener('click', (e)=>{
 function days(date){
     let d1 = new Date(date)
     let d2 = new Date()
-    return Math.floor((Date.UTC(d1.getFullYear(),d1.getMonth(),d1.getDate() - Date.UTC(d2.getFullYear(),d2.getMonth, d2.getDate()))/(1000 * 60 * 60 * 24)))
+    return Math.floor((Date.UTC(d1.getFullYear(), d1.getMonth(), d1.getDate()) - Date.UTC(d2.getFullYear(), d2.getMonth(), d2.getDate())) / (1000 * 60 * 60 * 24))
 }
 const addTripfunction = (e)=>{
     e.preventDefault()
 
 
-    tripInfo['from'] = document.getElementById('departure').value
-    tripInfo['to'] = document.getElementById('destination').value
-    tripInfo['date'] = document.getElementById('date').value
+    tripInfo['from'] = document.getElementById('fromInput').value
+    tripInfo['to'] = document.getElementById('toInput').value
+    tripInfo['date'] = document.getElementById('dateInput').value
     tripInfo['daystogo'] = days(tripInfo['date'])
 
     try{
@@ -74,6 +74,7 @@ const addTripfunction = (e)=>{
             return postData(tripInfo)
         }).then((data) => {
             UpdateUI(data)
+            console.log(data)
         })
     }catch(error){
         console.log('error:', error)
@@ -136,7 +137,7 @@ export const getImage = async(toCity) => {
 //post 
 
 export const postData = async(data) =>{
-    const req = await fetch('http://localhost:8088/add', {
+    const req = await fetch('http://localhost:8081/add', {
         method:"POST",
         credentials: "same-origin",
         headers:{

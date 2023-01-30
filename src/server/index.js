@@ -17,7 +17,7 @@ app.use(cors())
 app.use(express.static('dist'));
 
 // Setup Server
-const port = 8088
+const port = 8081
 app.listen(port, function () {
     console.log(`http://localhost:${port}`)
 })
@@ -36,7 +36,7 @@ app.post('/add', (req,res)=>{
         date: req.body.date,
         temp: req.body.temp,//weather
         summary: req.body.summary,//temp
-        daysLeft: req.body.daysLeft,
+        daystogo: req.body.daystogo,
         cityImage: req.body.cityImage
     }
     res.send(projectData)
