@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1aac26dbd0.js" crossorigin="anonymous"></script>
+    <title>Travel App</title>
+</head>
+<body>
+    <header>
+        
+        <ul>
+            <li><img src="https://img.icons8.com/external-victoruler-solid-victoruler/64/null/external-airplane-logistics-victoruler-solid-victoruler.png"/></li>
+            
+            <li class="nav">Plan your trip</li>
+            <li class="nav">Home</li>
+        </ul>
+    </header>
+     <div class="card" id="main">
+        <h1>Travel</h1>
+        <button id="addTrip"><i class="fa fa-plane"></i> Add Trip</button>
+        
+    </div> 
+    <!--plan trip-->
+     <div class="card" id="planner">
+        <h1>Plan your trip</h1>
+        <form action="" id="form">
+            <div class="group-form">
+                <i class="fa fa-plane-departure icon"></i>
+                <input type="text" class="fromInput" name="from" required> 
+                <label for="" class="labelText"> From</label>
+            </div>
+            <div class="group-form">
+                <i class="fa fa-plane-arrival icon"></i>
+                <input type="text" class="toInput" name="to"  required>
+                <label for="" class="labelText">To</label>
+            </div>
+            
+            <div> 
+                <label for="dateLabel"> <i class="fa fa-calendar iconCal "></i> Departing on </label> <br>
+                <input type="date" class="dateInput" name="date" required>
+               
+
+            </div>
+            
+            <input type="submit" class="inputSubmit" name="submit" value="Submit" id="submitTrip">
+
+        </form> 
+        
+    </div>
+    <div class="card" id="result">
+        <div>
+            <img src="" alt="" class="image" id="pixabayImage">
+        </div>
+        <div class="info">
+           
+            <h3 class="departure_from_city"> <i class="fa fa-plane-departure infoIcon"></i>Departure from:<span id="departure"></span></h3>
+            <h3 class="departure_from_city"> <i class="fa fa-plane-arrival infoIcon"></i>Destination to:<span id="destination"></span></h3>
+            <h3 class="departure_from_city"> <i class="fa fa-plane-arrival infoIcon"></i>Days to go:<span id="numberOfDays"></span></h3>
+            <h3 class="departure_from_city"> <i class="fa fa-calendar infoIcon"></i>Departing on:<span id="date"></span></h3>
+            <h3 class="departure_from_city"> <i class="fa fa-cloud infoIcon"></i>weather:<span id="temp">200C</span> &#176; F, <span
+                id="summary"></span></h3>
+                <button id="print">Print</button>
+                <button id="delete">Delete</button>
+        </div>
+        
+
+    </div>
+    <script>
+        if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+    </script>
+</body>
+</html>

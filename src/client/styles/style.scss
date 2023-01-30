@@ -1,0 +1,175 @@
+$color_1: #FFFFFF;
+$color_2: black;
+$color_3: rgb(255, 255, 255);
+$color_4: rgb(0, 0, 0);
+$color_5: #999;
+$color_6: #662e91;
+$font-family_1: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+$background-color_1: rgb(255, 255, 255);
+$background-color_2: #662e91;
+
+body {
+	background-image: url('../media/bg.jpg');
+	background-size: cover;
+}
+.card {
+	margin: 200px auto auto auto;
+	width: 800px;
+	height: 400px;
+	background-color: $background-color_1;
+	border-radius: 10px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+	text-align: center;
+}
+h1 {
+	text-align: center;
+	margin: 10px;
+	padding: 10px;
+}
+button {
+	background: #662e91;
+	border-radius: 999px;
+	box-shadow: #662e91 0 10px 20px -10px;
+	box-sizing: border-box;
+	color: $color_1;
+	cursor: pointer;
+	font-family: $font-family_1;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 24px;
+	opacity: 1;
+	outline: 0 solid transparent;
+	padding: 8px 18px;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	width: fit-content;
+	word-break: break-word;
+	border: 0;
+	margin: 70px auto auto auto;
+	padding: 15px;
+	&:hover {
+		background: #dedeff;
+		color: $color_2;
+	}
+}
+header {
+	background-color: $background-color_1;
+	width: 100%;
+	height: 90px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	border-bottom: 3px solid #662e91;
+	box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+ul {
+	li {
+		list-style: none;
+		display: inline;
+	}
+}
+.nav {
+	float: right;
+	margin: auto;
+	background-color: $background-color_2;
+	right: -10px;
+	color: $color_3;
+	padding: 5px 15px;
+	margin: 10px;
+	border-radius: 15px;
+	cursor: pointer;
+	&:hover {
+		background: #dedeff;
+		color: $color_2;
+	}
+}
+form {
+	margin: 10px 150px;
+	.labelText {
+		padding: 0 45px;
+		position: absolute;
+		pointer-events: none;
+		top: 0;
+		transform: translateY(20px) scale(1);
+		transition: all 0.2s ease-in-out;
+		left: 0px;
+		color: $color_5;
+	}
+	input {
+		padding: 5px 20px;
+		margin: 10px;
+		border: none;
+		border-bottom: 1px solid #662e91;
+		width: 100%;
+	}
+}
+.group-form {
+	position: relative;
+	width: 100%;
+	// margin-bottom: 10px;
+  
+	input {
+		&:focus {
+			+ {
+				.labelText {
+					transform: translateY(0);
+					color: $color_4;
+				}
+			}
+		}
+	}
+}
+input {
+	&:valid {
+		+ {
+			.labelText {
+				color: $color_4;
+				transform: translateY(0);
+			}
+		}
+	}
+	&:focus {
+		outline: none;
+	}
+}
+input[type=text] {
+	padding: 10px 55px;
+  
+}
+.icon {
+	color: $color_6;
+	margin: 0 10px;
+	position: absolute;
+	transform: translateY(18px);
+  left: 0;
+}
+.iconCal {
+	color: $color_6;
+	padding: 0 170px;
+	position: absolute;
+	left: 0;
+}
+label {
+	padding: 0 190px;
+	position: absolute;
+	left: 360px;
+}
+.infoIcon {
+	padding: 0 10px;
+	color: $color_6;
+}
+.info {
+	margin: 25px 0 0 0;
+}
+.image {
+	width: 150px;
+	height: 150px;
+	margin: 60px 60px;
+	border-radius: 50%;
+	border: 3px dashed #662e91;
+}
+#result {
+	display: grid;
+	grid-template-columns: 0.1fr auto;
+}
