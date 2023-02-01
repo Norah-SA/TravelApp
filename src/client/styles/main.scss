@@ -1,0 +1,113 @@
+main{
+    .addTrip{
+        background-color: #363062;
+        padding: 10px;
+        text-align: center;
+        h2{
+            color: rgb(255, 255, 255);
+        }
+        button {
+            background: #CBC9FF;
+            border-radius: 999px;
+            box-shadow: #CBC9FF 0 10px 20px -10px;
+            box-sizing: border-box;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            opacity: 1;
+            outline: 0 solid transparent;
+            padding: 0px 18px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: fit-content;
+            word-break: break-word;
+            border: 0;
+            &:hover {
+                background: #dedeff;
+                color: rgb(255, 255, 255);
+            }
+        }
+        
+    }
+    .plan-your-trip{
+        background-color: #363062;
+        padding: 5px;
+        text-align: center;
+        display: none;
+        i{
+            background-color: #CBC9FF;
+            border-radius: 10%;
+            padding: 10px;
+            &:hover{
+                opacity: 0.5;
+                color: rgb(0, 0, 0);
+            }
+        }
+        input{
+            outline: none;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            background: transparent;
+            border-bottom: 1px solid rgb(255, 255, 255) ;
+            color: rgb(255, 255, 255);
+        }
+        input[type=submit]{
+            background: #CBC9FF;
+            border-bottom: none ;
+            color: rgb(0, 0, 0);
+            &:hover{
+                opacity: 0.5;
+                color: rgb(0, 0, 0);
+            }
+        }
+    }
+    .trip-info{
+        margin: 50px 0;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        width: 700px;
+        height: 350px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        h3{
+            padding: 5px 15px;
+            i{
+                padding: 0 5px;
+                color: #363062;
+            }
+        }
+        .cityimage{
+            float: right;
+            width: 250px;
+            height: 250px;
+            margin: 5px 15px;
+            border-radius: 50%;
+            border: 3px double #363062;
+            
+            
+        }
+        .btn{
+            // float: right;
+            bottom: 15px;
+            right: 80px;
+            position: absolute;
+            
+            button{
+                padding: 5px 10px;
+                border-radius: 8px;
+                border-style: none;
+                background-color: #363062;
+                color: #FFFFFF;
+                cursor: pointer;
+            }
+        }
+    }
+}

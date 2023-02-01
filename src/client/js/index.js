@@ -7,8 +7,8 @@ const result = document.getElementById('result')
 
 const printBtn = document.getElementById('print')
 const deleteBtn = document.getElementById('delete')
-const addTripBtn = document.getElementById('addTrip')
-
+const addTripBtn = document.querySelector('.addButton')
+const goback = document.querySelector('.goBack')
 
 //form
 const form = document.getElementById('form')
@@ -36,8 +36,15 @@ const tripInfo = {}
 
 addTripBtn.addEventListener('click', (e)=>{
     e.preventDefault()
+    planner.style.display = "block"
+    main.style.display = "none"
     
-    planner.scrollIntoView({behavior: 'smooth'})
+})
+goback.addEventListener('click', (e)=>{
+    e.preventDefault()
+    planner.style.display = "none"
+    main.style.display = "block"
+    
 })
 
 function days(date){

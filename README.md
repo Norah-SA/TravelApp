@@ -1,10 +1,58 @@
-# Weather-Journal App Project
+# Travel App Project
+![Alt text](src/client/media/logo.jpg)
 
 ## Overview
-This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI. 
+This project will ask the user to enter the departure city , destination city , and date the user plan to travel in. The user will submit and will receive details about the trip. 
 
 ## Instructions
-This will require modifying the `server.js` file and the `website/app.js` file. You can see `index.html` for element references, and once you are finished with the project steps, you can use `style.css` to style your application to customized perfection.
+To install this project download zip file 
+- To build dev 
+```
+npm run build-dev
+```
+- To build prod
+```
+npm run build-prod
+```
+- After build start 
+```
+npm start
+```
+## Project files
+```shell script
+- Root:
+  - `.babelrc`
+  - `.gitignore`
+  - `package.json`
+  - `package-lock.json`
+  - `readme.md`
+  - `webpack.dev.js`
+  - `webpack.prod.js`
+  - src folder
+    - server folder
+      - `index.js`  
+    - client folder
+      - `index.js`
+      - html/views folder
+        - `index.html`
+      - js folder
+        - `index.js` 
+      - media folder
+        -`bg.jpg`
+      - styles folder
+        - `style.scss` 
 
-## Extras
-If you are interested in testing your code as you go, you can use `tests.js` as a template for writing and running some basic tests for your code.
+```
+## Used API's
+
+- GeoNames
+- Weatherbit 
+- Pixabay
+
+## Screenshots
+
+![Alt text](screenshot/1.png)
+
+![Alt text](screenshot/2.png)
+
+![Alt text](screenshot/3.png)

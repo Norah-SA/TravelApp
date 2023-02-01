@@ -1,0 +1,27 @@
+
+footer{
+    background: #363062;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    .social-m{
+        
+        margin: 10px;
+        
+        i{
+          font-size: 25px;
+          padding: 0 10px;
+          &:hover{
+            opacity: 0.5;
+          }
+        }
+    }
+    p{
+     
+        span{
+            color: #CBC9FF;
+        }
+    }
+}
