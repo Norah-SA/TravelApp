@@ -10,21 +10,24 @@ let projectData = {}
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+//dotenv
+const dotenv = require('dotenv');
+dotenv.config();
 
 //cors
 app.use(cors())
 //dist
 app.use(express.static('dist'));
 
-// Setup Server
-const port = 8081
-app.listen(port, function () {
-    console.log(`http://localhost:${port}`)
-})
+// // Setup Server
+// const port = 8080
+// app.listen(port, function () {
+//     console.log(`http://localhost:${port}`)
+// })
 
 //GET
 app.get('/',(req,res)=>{
-    res.sendFile('dist/index.html')
+    res.status(200).sendFile('dist/index.html')
 })
 
 //POST
@@ -41,3 +44,5 @@ app.post('/add', (req,res)=>{
     }
     res.send(projectData)
 })
+
+module.exports = app

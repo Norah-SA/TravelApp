@@ -19,10 +19,10 @@ const date = document.querySelector('input[name= "date"]')
 
 //api's
 //GeoNames 
-const username = 'norahsa'
+const username = "norahsa"
 const geoNamesURL = 'http://api.geonames.org/searchJSON?q=';
 //weatherbit
-const weatherbitapikey ="f75aaa41a76946b8a63d507a69725dc0"
+const weatherbitapikey = "f75aaa41a76946b8a63d507a69725dc0"
 //https://api.weatherbit.io/v2.0/forecast/daily?city=Raleigh,NC&key=API_KEY
 const weatherbitforecast = "http://api.weatherbit.io/v2.0/forecast/daily?"
 //https://api.weatherbit.io/v2.0/history/daily?postal_code=27601&country=US&start_date=2023-01-20&end_date=2023-01-21&key=API_KEY
@@ -31,6 +31,7 @@ const weatherbithistory = 'http://api.weatherbit.io/v2.0/history/daily?'
 const PixabayUrl = "https://pixabay.com/api/?key="
 const Pixabayapikey = "33081497-5b2001bc4eb3434f26dd72828"
 const tripInfo = {}
+//dotenv
 
 //function add trip
 
