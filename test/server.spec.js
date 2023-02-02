@@ -4,7 +4,7 @@ const request = require("supertest");
 const app = require("../src/server/index");
 
 describe("Test the server", () => {
-    test("Testing GET method", done => {
+    it("Testing GET method", done => {
         request(app)
             .get("/")
             .then(response => {
